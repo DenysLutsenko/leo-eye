@@ -27,7 +27,7 @@ body {
   .container {
     min-height: 100%;
     padding: 28px 160/1280*100% 236px;
-    background: url("@{img-url}/top-bg.png") no-repeat center 0;
+    background: url("@{img-url}/mob-bg.png");
   }
 }
 
@@ -59,7 +59,7 @@ header {
   }
 
   li {
-    width: 200px;
+    width: 100%;
     display: block;
     margin: 0 auto 10px;
     padding: 13px 32/476.5*100%;
@@ -188,7 +188,9 @@ header {
 
   button {
     margin-bottom: 40px;
+    border: none;
     padding: 13px 29px;
+    cursor: pointer;
     background-color: #007b4e;
     font-family: @default-font-family;
     .set-font-size(30);
@@ -237,6 +239,11 @@ footer {
 // =========================  media queries   =========================
 
 @media only screen and (min-width: 700px) {
+
+  body .container {
+    background: url("@{img-url}/top-bg.png") no-repeat center 0;
+  }
+
   body {
     font-size: 16px;
   }
