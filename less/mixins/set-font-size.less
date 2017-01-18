@@ -1,0 +1,4 @@
+// Takes font-size value in px and sets "font-size" property in em.
+.set-font-size(@px, @parent-font-size: 16px){
+  font-size: unit(@px/@parent-font-size, em);
+}

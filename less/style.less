@@ -1,0 +1,298 @@
+@import "biko-font.less";
+@import "variables.less";
+@import "container.less";
+@import "mixins/set-font-size.less";
+@import "animation.less";
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+body {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  font-family: @default-font-family;
+  .set-font-size(14, 16);
+
+  .container {
+    min-height: 100%;
+    padding: 28px 160/1280*100% 236px;
+    background: url("@{img-url}/top-bg.png") no-repeat center 0;
+  }
+}
+
+li {
+  list-style: none inside;
+}
+
+a {
+  text-decoration: none;
+  color: @default-font-color;
+}
+
+// =========================  HEADER  =========================
+
+header {
+  padding: 0 22px;
+  text-align: center;
+
+  .logo1 {
+    margin-bottom: 20px;
+  }
+
+  figcaption {
+    display: inline-block;
+    padding-left: 9px;
+    padding-top: 8px;
+    font-family: @helper-font-family;
+    .set-font-size(27.58);
+  }
+
+  li {
+    width: 200px;
+    display: block;
+    margin: 0 auto 10px;
+    padding: 13px 32/476.5*100%;
+    .set-font-size(18);
+
+    &.active,
+    &:hover {
+      padding: 10px (32-3)/476.5*100%;
+      border: 3px solid #010101;
+    }
+  }
+}
+
+// =========================  section.top   =========================
+
+.top {
+  position: relative;
+  margin-bottom: 33px;
+
+  h2 {
+    text-align: center;
+    .set-font-size(36);
+  }
+
+  p {
+    margin: 24px 0;
+    padding-left: 19/960*100%;
+    padding-right: 60/960*100%;
+    .set-font-size(22);
+    text-align: center;
+
+    &::first-letter {
+      margin-left: 36/887*100%;
+    }
+  }
+}
+
+.foot1,
+.foot2,
+.foot3,
+.foot4,
+.foot5,
+.foot6 {
+  position: absolute;
+  visibility: hidden;
+}
+
+.foot1 {
+  top: 172px;
+  left: 579/960*100%;
+  animation-name: foot1;
+  animation-delay: 1.5s;
+}
+
+.foot2 {
+  top: 142px;
+  left: 669/960*100%;
+  animation-name: foot2;
+  animation-delay: 2s;
+}
+
+.foot3 {
+  top: 175px;
+  left: 767/960*100%;
+  animation-name: foot3;
+  animation-delay: 2.5s;
+}
+
+.foot4 {
+  top: 221px;
+  left: 867/960*100%;
+  animation-name: foot4;
+  animation-delay: 3s;
+}
+
+.foot5 {
+  top: 312px;
+  left: 895/960*100%;
+  animation-name: foot5;
+  animation-delay: 3.5s;
+}
+
+.foot6 {
+  top: 398px;
+  left: 896/960*100%;
+  animation-name: foot6;
+  animation-delay: 4s;
+}
+
+.main-logo {
+  text-align: center;
+  margin-top: 20px;
+  figcaption {
+    .set-font-size(18.68);
+  }
+}
+
+// =========================  section.middle   =========================
+
+.middle {
+  position: relative;
+  text-align: center;
+
+  h2 {
+    margin: 30px 0 25px;
+    text-align: center;
+    .set-font-size(36);
+  }
+
+  p {
+    margin-bottom: 80px;
+    text-align: center;
+    .set-font-size(22);
+    line-height: 1.2;
+  }
+
+  .logo {
+    margin-bottom: 35px;
+
+    figcaption {
+      display: inline-block;
+      padding-left: 15px;
+      .set-font-size(58.77);
+    }
+  }
+
+  button {
+    margin-bottom: 40px;
+    padding: 13px 29px;
+    background-color: #007b4e;
+    font-family: @default-font-family;
+    .set-font-size(30);
+  }
+}
+
+// =========================  footer   =========================
+
+footer {
+  position: relative;
+  height: 236px;
+  margin: -236px auto 0;
+  background: url("@{img-url}/bottom-bg.png") no-repeat center 100%;
+
+  ul {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .text {
+    margin-bottom: 10px;
+  }
+
+  li {
+    display: inline-block;
+    padding-left: 80/1280*100%;
+    .set-font-size(20);
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
+
+  p {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    .set-font-size(18);
+  }
+}
+
+// =========================  media queries   =========================
+
+@media only screen and (min-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  header li {
+    width: 30%;
+    display: inline-block;
+  }
+
+  footer .text {
+    display: inline;
+
+    li:last-of-type {
+      padding-right: 80/1280*100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1185px) {
+
+  header li {
+    width: auto;
+  }
+
+  .top article {
+    margin-top: 220px;
+  }
+
+  .top p {
+    margin-bottom: 94px;
+  }
+
+  .main-logo {
+    position: absolute;
+    width: 100%;
+    top: 91px;
+    left: 65/960*100%;
+    text-align: left;
+  }
+
+  .foot1,
+  .foot2,
+  .foot3,
+  .foot4,
+  .foot5,
+  .foot6 {
+    animation-fill-mode: backwards;
+    visibility: visible;
+  }
+
+  .logo1 {
+    text-align: left;
+
+    img {
+      float: left;
+    }
+  }
+
+}
