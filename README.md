@@ -1,2 +1,2 @@
 # leo-eye
-For preview visit: https://github.com/Faith-Bian/leo-eye
+For preview visit: https://faith-bian.github.io/leo-eye/
