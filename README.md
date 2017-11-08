@@ -1,2 +1,2 @@
 # leo-eye
-For preview visit: https://denyslutsenko.github.io/leo-eye/
+For preview visit: https://denislutsenko.github.io/leo-eye/
